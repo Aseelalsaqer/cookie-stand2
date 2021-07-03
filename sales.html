@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salmon Cookies | Sales</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="CSS/salestyle.css">
 </head>
 
 <body>
     <h1>Pat's Salmon Cookies: Sales Data</h1>
     <header>
         <form id="cookiesForm">
-            <fieldset>
+            <fieldset id="cc">
                 <legend>Cookies Sales</legend>
 
                 <label1 for="shopname">location:</label1>
@@ -29,20 +30,19 @@
                 <input type="number" id="avg" step="0.1">
                 <br><br>
 
-                <input type="submit" value="Submit">
+                <input style="background-color: rgb(60, 30, 5); color:burlywood;" type="submit" value="Submit">
 
             </fieldset>
 
         </form>
         <br>
         <br>
-    </header>
-    <main>
+
         <div id="result">
 
         </div>
-    </main>
 
+    </header>
 
     <script src="app.js"></script>
 </body>
