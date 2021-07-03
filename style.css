@@ -1,4 +1,4 @@
-#container{
+/* #container{
 display: flex;
     flex-flow: row-reverse;
     justify-content: space-evenly;
@@ -10,5 +10,8 @@ ul li {
     margin: 50px;
 }
 a {
-    text-decoration: none;
+    text-decoration: none; */
+/* } */
+table , th , td{
+    border: solid black 1px;
 }
