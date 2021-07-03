@@ -334,7 +334,7 @@ Shops.prototype.clacCustomersEachHour = function () {
 Shops.prototype.calcCookiesEachHous = function () {
     for (let i = 0; i < workingHours.length; i++) {
 
-        this.cookiesEachHous.push(Math.floor(this.avgCookies * this.customersEachHour[i]));
+        this.cookiesEachHous.push(Math.ceil(this.avgCookies * this.customersEachHour[i]));
         this.totalCookiesPerDay += this.cookiesEachHous[i];
     }
 
@@ -370,7 +370,7 @@ function makeHeadr() {
     lastTh.textContent = 'Daily Location Total';
 
 }
-makeHeadr();
+
 
 Shops.prototype.render = function () {
     let dataRow = document.createElement('tr');
@@ -390,11 +390,8 @@ Shops.prototype.render = function () {
     totalDailyForEachShop.textContent = this.totalCookiesPerDay;
 }
 
-for (let i = 0; i < shopArray.length; i++) {
-    shopArray[i].clacCustomersEachHour();
-    shopArray[i].calcCookiesEachHous();
-    shopArray[i].render();
-}
+
+
 function makeFooter() {
     let footerRow = document.createElement('tr');
     tableElement.appendChild(footerRow);
@@ -409,18 +406,59 @@ function makeFooter() {
 
             totalEachHour += shopArray[j].cookiesEachHous[i];
 
-            
 
-            
+
+
         }
         megaTotal += totalEachHour;
         let footerData = document.createElement('td');
         footerRow.appendChild(footerData);
         footerData.textContent = totalEachHour;
     }
-let finalTd = document.createElement('td');
-footerRow.appendChild(finalTd);
-finalTd.textContent = megaTotal;
+    let finalTd = document.createElement('td');
+    footerRow.appendChild(finalTd);
+    finalTd.textContent = megaTotal;
 }
+const cookiesForm = document.getElementById('cookiesForm');
+cookiesForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let newLocation = event.target.shopname.value;
+
+    let newMincust = event.target.min.value;
+    newMincust = parseInt(newMincust);
+
+    let newMaxcust = event.target.max.value;
+    newMaxcust = parseInt(newMaxcust);
+
+    let newAvgcust = event.target.avg.value;
+    newAvgcust = parseFloat(newAvgcust);
+
+    let newShops = new Shops(newLocation, newMincust, newMaxcust, newAvgcust)
+
+
+    newShops.clacCustomersEachHour();
+    newShops.calcCookiesEachHous();
+
+    let deleted = tableElement.rows.length - 1
+    tableElement.deleteRow(deleted);
+
+    newShops.render();
+
+    makeFooter();
+
+}
+makeHeadr();
+
+for (let i = 0; i < shopArray.length; i++) {
+    shopArray[i].clacCustomersEachHour();
+    shopArray[i].calcCookiesEachHous();
+    shopArray[i].render();
+}
+
+
 makeFooter();
+
+
 
