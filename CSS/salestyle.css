@@ -1,0 +1,30 @@
+ 
+    
+ table , th , td{
+        border: solid black 1px;
+    }
+#result {
+    margin-left: 230px;
+
+    
+   
+   
+}
+h1 {
+    text-align: center;
+    color: rgb(66, 30, 5);
+
+}    
+#cc {
+    width: 10%;
+    text-align: center;
+    margin-left: 650px;
+    background-color: burlywood;
+    color: rgb(66, 30, 5);
+
+
+}
+body{
+    background-image: url(https://cdn.dribbble.com/users/2536766/screenshots/6424972/cookie-bites-gif.gif);
+
+}

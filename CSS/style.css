@@ -1,0 +1,114 @@
+.container {
+    margin: 2em;
+    box-shadow: 0px 0px 10px 0px; 
+    background-color: burlywood;
+    text-align: center;
+    
+    
+    
+}
+
+.hFlex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+   
+}
+
+.vFlex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+
+   
+ #q {
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0px 0px 10px 0px; 
+        margin-left: 200px;
+        margin-right: 200px;
+        font-family: 'Zen Loop', cursive;
+        font-size: 60px;
+
+
+    }
+     
+ul li {
+        display: inline;
+        
+        color: rgb(66, 30, 5);
+        font-family: 'Zen Tokyo Zoo', cursive;
+        font-size: 30px;
+        margin-right: 20px;
+
+    }
+a {
+    display: list-item;
+        text-decoration: none;
+         font-family: 'Lobster', cursive;
+        color: rgb(66, 30, 5);
+        font-size:35px
+        
+      
+     } 
+     #h {
+         margin-left: 60px;
+     }
+ h1 {
+     background-color: burlywood;
+     color: rgb(66, 30, 5);
+     margin: px;
+ }
+ .r {
+     font-size: 40px;
+    
+
+ }
+ .collapsible {
+    background-color: rgb(66, 30, 5);
+    color: burlywood;
+    cursor: pointer;
+    padding: 18px;
+    width: 30%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: list-item;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ font-family: 'Paytone One', sans-serif;
+    
+    
+    
+ }
+  
+.active, .collapsible:hover {
+    background-color: rgb(201, 168, 125);
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: burlywood;
+    color: rgb(66, 30, 5);
+    font-family: 'Belgrano', serif;
+    
+}
+ div img {
+        margin: 30px;
+        width:20%;
+        display: inline-table;
+ }
+body{
+    background-image: url(https://cdn.dribbble.com/users/2536766/screenshots/6424972/cookie-bites-gif.gif);
+
+}
+#h {
+    background-image: url(https://cdn.dribbble.com/users/261567/screenshots/1372220/map2.gif);
+}
